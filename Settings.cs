@@ -29,7 +29,7 @@ namespace RGBSync
 
             Process.Start("C:\\Program Files (x86)\\ASUS\\AURA\\AURA.exe");
             Thread.Sleep(1000);
-            Process.GetProcessesByName("Aura")[0].Kill();
+           Process.GetProcessesByName("Aura")[0].Kill();
 
             tabCorsairLink.Enabled = false;
             tabPhilips.Enabled = false;
@@ -68,7 +68,7 @@ namespace RGBSync
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex.Message + "\r\n" + ex.StackTrace, "Exception!");
+                throw ex;
             }
         }
 
