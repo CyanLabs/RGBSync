@@ -175,6 +175,7 @@
             // 
             this.chkCM.AutoSize = true;
             this.chkCM.Checked = global::RGBSync.Properties.Settings.Default.UseCM;
+            this.chkCM.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkCM.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseCM", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.chkCM.Location = new System.Drawing.Point(6, 75);
             this.chkCM.Name = "chkCM";
@@ -187,6 +188,7 @@
             // 
             this.chkMSI.AutoSize = true;
             this.chkMSI.Checked = global::RGBSync.Properties.Settings.Default.UseMSI;
+            this.chkMSI.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkMSI.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseMSI", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.chkMSI.Location = new System.Drawing.Point(187, 75);
             this.chkMSI.Name = "chkMSI";
@@ -199,6 +201,7 @@
             // 
             this.chkNovation.AutoSize = true;
             this.chkNovation.Checked = global::RGBSync.Properties.Settings.Default.UseNovation;
+            this.chkNovation.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkNovation.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseNovation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.chkNovation.Location = new System.Drawing.Point(187, 52);
             this.chkNovation.Name = "chkNovation";
@@ -264,7 +267,6 @@
             // 
             this.chkCorsairLink.AutoSize = true;
             this.chkCorsairLink.Checked = global::RGBSync.Properties.Settings.Default.UseCorsairLink;
-            this.chkCorsairLink.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkCorsairLink.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseCorsairLink", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.chkCorsairLink.Location = new System.Drawing.Point(6, 29);
             this.chkCorsairLink.Name = "chkCorsairLink";

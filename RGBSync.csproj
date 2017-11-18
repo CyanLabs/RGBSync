@@ -34,6 +34,13 @@
     <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HidLibrary, Version=3.2.46.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>rgb.net\HidLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="HidSharp">
+      <HintPath>rgb.net\HidSharp.dll</HintPath>
+    </Reference>
     <Reference Include="RGB.NET.Brushes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>rgb.net\RGB.NET.Brushes.dll</HintPath>
@@ -41,6 +48,10 @@
     <Reference Include="RGB.NET.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>rgb.net\RGB.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="RGB.NET.Decorators, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>rgb.net\RGB.NET.Decorators.dll</HintPath>
     </Reference>
     <Reference Include="RGB.NET.Devices.Asus, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -78,10 +89,28 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>rgb.net\RGB.NET.Groups.dll</HintPath>
     </Reference>
+    <Reference Include="RGB.NET.Input, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>rgb.net\RGB.NET.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="RGB.NET.Input.Corsair, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>rgb.net\RGB.NET.Input.Corsair.dll</HintPath>
+    </Reference>
+    <Reference Include="RGB.NET.WPF, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>rgb.net\RGB.NET.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia.Midi">
+      <HintPath>rgb.net\Sanford.Multimedia.Midi.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.ValueTuple, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>rgb.net\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
