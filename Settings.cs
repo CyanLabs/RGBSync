@@ -84,6 +84,7 @@ namespace RGBSync
         private void BtnSave_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Save();
+            Application.Restart();
         }
 
         private void chkPhilips_CheckedChanged(object sender, EventArgs e)
