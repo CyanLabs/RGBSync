@@ -81,7 +81,7 @@
             // notifyIcon1
             // 
             this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.notifyIcon1.BalloonTipText = "RGBSync is still running.\r\nRight click the icon in your system tray to close.";
+            this.notifyIcon1.BalloonTipText = "RGBSync is active";
             this.notifyIcon1.BalloonTipTitle = "RGBSync";
             this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));

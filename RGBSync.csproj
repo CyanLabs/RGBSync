@@ -34,10 +34,6 @@
     <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HidLibrary, Version=3.2.46.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>rgb.net\HidLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="RGB.NET.Brushes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>rgb.net\RGB.NET.Brushes.dll</HintPath>
