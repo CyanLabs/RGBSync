@@ -1,6 +1,6 @@
 # RGBSync
 
-A ready to use appliciation for syncing RGB.NET capable devices. it uses Aura as the master and mimics that to all other RGB.NET capable devices 
+A ready to use appliciation for syncing RGB.NET capable devices. it uses Aura as the master and mimics that to all other RGB.NET capable devices and Corsair Link Lighting Node Pro / Commander Pro.
 
 ![Screenshot](screenshot.png "Screenshot")
 
