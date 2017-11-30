@@ -40,13 +40,13 @@ namespace RGBSync
                 //surface.Exception += args => Dispatcher.Invoke(() => Log.AppendText(GetExceptionString(args.Exception) + "\r\n"));
 
                 if (chkAura.Checked) {surface.LoadDevices(AsusDeviceProvider.Instance);}
-                if (chkCorsairCue.Checked) { surface.LoadDevices(CorsairDeviceProvider.Instance);}
+                //if (chkCorsairCue.Checked) { surface.LoadDevices(CorsairDeviceProvider.Instance);}
                 if (chkLogitech.Checked) { surface.LoadDevices(LogitechDeviceProvider.Instance); }
-                if (chkCM.Checked) { surface.LoadDevices(CoolerMasterDeviceProvider.Instance); }
-                if (chkNovation.Checked) { surface.LoadDevices(NovationDeviceProvider.Instance); }
-                if (chkPhilips.Checked) { surface.LoadDevices(new PhilipsDeviceProvider(TxtPhilipsIP.Text)); }
+                //if (chkCM.Checked) { surface.LoadDevices(CoolerMasterDeviceProvider.Instance); }
+                //if (chkNovation.Checked) { surface.LoadDevices(NovationDeviceProvider.Instance); }
+               // if (chkPhilips.Checked) { surface.LoadDevices(new PhilipsDeviceProvider("192.168.1.28")); }
                 if (chkCorsairLink.Checked) { surface.LoadDevices(CorsairLinkDeviceProvider.Instance); }
-                if (chkMSI.Checked) { surface.LoadDevices(MsiDeviceProvider.Instance); }
+                //if (chkMSI.Checked) { surface.LoadDevices(MsiDeviceProvider.Instance); }
                 surface.AlignDevies();
 
                 AsusMainboardRGBDevice syncDevice = surface.Devices.FirstOrDefault(x => x is AsusMainboardRGBDevice) as AsusMainboardRGBDevice;

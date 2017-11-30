@@ -26,7 +26,7 @@ namespace RGBSync
 
         public override void PerformRender(Rectangle rectangle, IEnumerable<BrushRenderTarget> renderTargets)
         {
-            _currentColor = _device?.GetColors()[4] ?? Color.Transparent;
+            _currentColor = _device?.GetColors()[0] ?? Color.Transparent;
 
             base.PerformRender(rectangle, renderTargets);
         }
