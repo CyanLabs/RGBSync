@@ -6,9 +6,7 @@ using RGB.NET.Devices.Corsair;
 using RGB.NET.Devices.Logitech;
 using RGB.NET.Devices.Asus;
 using RGB.NET.Devices.CorsairLink;
-using RGB.NET.Devices.Philips;
 using RGB.NET.Groups;
-using RGB.NET.Brushes;
 using RGB.NET.Devices.CoolerMaster;
 using RGB.NET.Devices.Novation;
 using RGB.NET.Devices.Msi;
@@ -19,6 +17,9 @@ namespace RGBSync
 {
     public partial class Settings : Form
     {
+        private ILedGroup _ledGroup;
+        private const LedId SYNC_LED = LedId.Mainboard1;
+
         public Settings()
         {
             InitializeComponent();
@@ -26,45 +27,35 @@ namespace RGBSync
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            Process.Start("C:\\Program Files (x86)\\ASUS\\AURA\\AURA.exe");
-            Thread.Sleep(1000);
-           Process.GetProcessesByName("Aura")[0].Kill();
+            if (chkShowNotification.Checked) notifyIcon1.ShowBalloonTip(5000, "RGBSync", "Click the notification icon to configure RGB Devices.", ToolTipIcon.Info);
+            //Process.Start("C:\\Program Files (x86)\\ASUS\\AURA\\AURA.exe");
+            //Thread.Sleep(1000);
+            //Process.GetProcessesByName("Aura")[0].Kill();
 
             tabCorsairLink.Enabled = false;
-            tabPhilips.Enabled = false;
             try
             {
-                
-                RGBSurface surface = RGBSurface.Instance;
-                //surface.Exception += args => Dispatcher.Invoke(() => Log.AppendText(GetExceptionString(args.Exception) + "\r\n"));
 
-                if (chkAura.Checked) {surface.LoadDevices(AsusDeviceProvider.Instance);}
-                //if (chkCorsairCue.Checked) { surface.LoadDevices(CorsairDeviceProvider.Instance);}
-                if (chkLogitech.Checked) { surface.LoadDevices(LogitechDeviceProvider.Instance); }
-                //if (chkCM.Checked) { surface.LoadDevices(CoolerMasterDeviceProvider.Instance); }
-                //if (chkNovation.Checked) { surface.LoadDevices(NovationDeviceProvider.Instance); }
-               // if (chkPhilips.Checked) { surface.LoadDevices(new PhilipsDeviceProvider("192.168.1.28")); }
-                if (chkCorsairLink.Checked) { surface.LoadDevices(CorsairLinkDeviceProvider.Instance); }
-                //if (chkMSI.Checked) { surface.LoadDevices(MsiDeviceProvider.Instance); }
-                surface.AlignDevies();
+                RGBSurface.Instance.LoadDevices(AsusDeviceProvider.Instance, RGBDeviceType.Mainboard, throwExceptions: true);
+                if (chkCorsairCue.Checked) { RGBSurface.Instance.LoadDevices(CorsairDeviceProvider.Instance, exclusiveAccessIfPossible: true, throwExceptions: true); }
+                if (chkLogitech.Checked) { RGBSurface.Instance.LoadDevices(LogitechDeviceProvider.Instance, exclusiveAccessIfPossible: true, throwExceptions: true); }
+                if (chkCM.Checked) { RGBSurface.Instance.LoadDevices(CoolerMasterDeviceProvider.Instance, exclusiveAccessIfPossible: true, throwExceptions: true); }
+                if (chkNovation.Checked) { RGBSurface.Instance.LoadDevices(NovationDeviceProvider.Instance, exclusiveAccessIfPossible: true, throwExceptions: true); }
+                if (chkCorsairLink.Checked) { RGBSurface.Instance.LoadDevices(CorsairLinkDeviceProvider.Instance, exclusiveAccessIfPossible: false, throwExceptions: true); }
+                if (chkMSI.Checked) { RGBSurface.Instance.LoadDevices(MsiDeviceProvider.Instance, exclusiveAccessIfPossible: true, throwExceptions: true); }
 
-                AsusMainboardRGBDevice syncDevice = surface.Devices.FirstOrDefault(x => x is AsusMainboardRGBDevice) as AsusMainboardRGBDevice;
-                if (syncDevice != null)
-                {
-                    // this will be easier if the syncback stuff is done;
-                    ListLedGroup background = new ListLedGroup(surface.Leds);
-                    background.Exclude(syncDevice.ToArray());
-                    background.Brush = new SolidColorBrush(new RGB.NET.Core.Color(0, 0, 0)); ;
 
-                    SyncAuraBrush syncAuraBrush = new SyncAuraBrush(syncDevice);
-                    ListLedGroup syncGroup = new ListLedGroup(surface.Leds);
-                    syncGroup.Exclude(syncDevice.ToArray());
-                    syncGroup.Brush = syncAuraBrush;
-                }
+                AsusMainboardRGBDevice mainboard = RGBSurface.Instance.GetDevices<AsusMainboardRGBDevice>().FirstOrDefault();
+                if (mainboard == null)
+                    throw new ApplicationException("No mainboard to sync with is loaded.");
 
-                surface.UpdateFrequency = 1 / 30.0;
-                surface.UpdateMode = UpdateMode.Continuous;
+                mainboard.UpdateMode = DeviceUpdateMode.SyncBack;
+
+                _ledGroup = new ListLedGroup(RGBSurface.Instance.Leds).Exclude(mainboard.ToArray());
+                _ledGroup.Brush = new SyncBrush(((IRGBDevice)mainboard)[SYNC_LED]);
+
+                RGBSurface.Instance.UpdateFrequency = 1 / 60.0;
+                RGBSurface.Instance.UpdateMode = UpdateMode.Continuous;
             }
             catch (Exception ex)
             {
@@ -87,11 +78,6 @@ namespace RGBSync
             Application.Restart();
         }
 
-        private void chkPhilips_CheckedChanged(object sender, EventArgs e)
-        {
-            tabPhilips.Enabled = (chkPhilips.CheckState == CheckState.Checked);
-        }
-
         bool allowClosing = false;
 
         private void Settings_FormClosing(object sender, FormClosingEventArgs e)
@@ -104,7 +90,7 @@ namespace RGBSync
                     this.Hide();
                     e.Cancel = true;
                 }
-                    
+
             }
         }
 

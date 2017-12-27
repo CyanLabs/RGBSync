@@ -39,43 +39,39 @@
             this.BtnSave = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
+            this.LblCopyright = new System.Windows.Forms.Label();
             this.chkCM = new System.Windows.Forms.CheckBox();
             this.chkMSI = new System.Windows.Forms.CheckBox();
+            this.chkShowNotification = new System.Windows.Forms.CheckBox();
             this.chkNovation = new System.Windows.Forms.CheckBox();
-            this.chkPhilips = new System.Windows.Forms.CheckBox();
-            this.chkAura = new System.Windows.Forms.CheckBox();
             this.chkCorsairCue = new System.Windows.Forms.CheckBox();
             this.chkLogitech = new System.Windows.Forms.CheckBox();
             this.chkCorsairLink = new System.Windows.Forms.CheckBox();
-            this.tabPhilips = new System.Windows.Forms.TabPage();
-            this.TxtPhilipsIP = new System.Windows.Forms.MaskedTextBox();
-            this.LblPhilipsIP = new System.Windows.Forms.Label();
             this.tabCorsairLink = new System.Windows.Forms.TabPage();
             this.GrpLink1 = new System.Windows.Forms.GroupBox();
             this.LblLinkChDesc = new System.Windows.Forms.Label();
             this.ChkLinkCh2 = new System.Windows.Forms.CheckBox();
             this.ChkLinkCh1 = new System.Windows.Forms.CheckBox();
-            this.GrpLink3 = new System.Windows.Forms.GroupBox();
-            this.NumLinkCh2Amount = new System.Windows.Forms.NumericUpDown();
-            this.LblLinkCh2Amount = new System.Windows.Forms.Label();
-            this.LblLinkCh2Type = new System.Windows.Forms.Label();
-            this.DDLinkCh2Type = new System.Windows.Forms.ComboBox();
             this.GrpLink2 = new System.Windows.Forms.GroupBox();
             this.NumLinkCh1Amount = new System.Windows.Forms.NumericUpDown();
             this.LblLinkCh1Amount = new System.Windows.Forms.Label();
             this.LblLinkCh1Type = new System.Windows.Forms.Label();
             this.DDLinkCh1Type = new System.Windows.Forms.ComboBox();
+            this.GrpLink3 = new System.Windows.Forms.GroupBox();
+            this.NumLinkCh2Amount = new System.Windows.Forms.NumericUpDown();
+            this.LblLinkCh2Amount = new System.Windows.Forms.Label();
+            this.LblLinkCh2Type = new System.Windows.Forms.Label();
+            this.DDLinkCh2Type = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabGeneral.SuspendLayout();
-            this.tabPhilips.SuspendLayout();
             this.tabCorsairLink.SuspendLayout();
             this.GrpLink1.SuspendLayout();
-            this.GrpLink3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumLinkCh2Amount)).BeginInit();
             this.GrpLink2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumLinkCh1Amount)).BeginInit();
+            this.GrpLink3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumLinkCh2Amount)).BeginInit();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -131,9 +127,9 @@
             // BtnSave
             // 
             this.BtnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSave.Location = new System.Drawing.Point(203, 225);
+            this.BtnSave.Location = new System.Drawing.Point(270, 387);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(192, 26);
+            this.BtnSave.Size = new System.Drawing.Size(125, 26);
             this.BtnSave.TabIndex = 2;
             this.BtnSave.Text = "Save Settings";
             this.BtnSave.UseVisualStyleBackColor = true;
@@ -145,39 +141,46 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabGeneral);
-            this.tabControl1.Controls.Add(this.tabPhilips);
             this.tabControl1.Controls.Add(this.tabCorsairLink);
             this.tabControl1.Location = new System.Drawing.Point(12, 100);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(386, 125);
+            this.tabControl1.Size = new System.Drawing.Size(386, 287);
             this.tabControl1.TabIndex = 3;
             // 
             // tabGeneral
             // 
             this.tabGeneral.Controls.Add(this.chkCM);
             this.tabGeneral.Controls.Add(this.chkMSI);
+            this.tabGeneral.Controls.Add(this.chkShowNotification);
             this.tabGeneral.Controls.Add(this.chkNovation);
-            this.tabGeneral.Controls.Add(this.chkPhilips);
-            this.tabGeneral.Controls.Add(this.chkAura);
             this.tabGeneral.Controls.Add(this.chkCorsairCue);
             this.tabGeneral.Controls.Add(this.chkLogitech);
             this.tabGeneral.Controls.Add(this.chkCorsairLink);
             this.tabGeneral.Location = new System.Drawing.Point(4, 22);
             this.tabGeneral.Name = "tabGeneral";
             this.tabGeneral.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGeneral.Size = new System.Drawing.Size(378, 99);
+            this.tabGeneral.Size = new System.Drawing.Size(378, 261);
             this.tabGeneral.TabIndex = 0;
             this.tabGeneral.Text = "General";
             this.tabGeneral.UseVisualStyleBackColor = true;
+            // 
+            // LblCopyright
+            // 
+            this.LblCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LblCopyright.AutoSize = true;
+            this.LblCopyright.Location = new System.Drawing.Point(9, 394);
+            this.LblCopyright.Name = "LblCopyright";
+            this.LblCopyright.Size = new System.Drawing.Size(252, 13);
+            this.LblCopyright.TabIndex = 5;
+            this.LblCopyright.Text = "Copyright © Cyanlabs 2017 - Powered by RGB.NET";
             // 
             // chkCM
             // 
             this.chkCM.AutoSize = true;
             this.chkCM.Checked = global::RGBSync.Properties.Settings.Default.UseCM;
-            this.chkCM.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkCM.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseCM", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.chkCM.Location = new System.Drawing.Point(6, 75);
+            this.chkCM.Location = new System.Drawing.Point(187, 52);
             this.chkCM.Name = "chkCM";
             this.chkCM.Size = new System.Drawing.Size(152, 17);
             this.chkCM.TabIndex = 4;
@@ -188,14 +191,26 @@
             // 
             this.chkMSI.AutoSize = true;
             this.chkMSI.Checked = global::RGBSync.Properties.Settings.Default.UseMSI;
-            this.chkMSI.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkMSI.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseMSI", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.chkMSI.Location = new System.Drawing.Point(187, 75);
+            this.chkMSI.Location = new System.Drawing.Point(187, 29);
             this.chkMSI.Name = "chkMSI";
             this.chkMSI.Size = new System.Drawing.Size(109, 17);
             this.chkMSI.TabIndex = 4;
             this.chkMSI.Text = "Use MSI Devices";
             this.chkMSI.UseVisualStyleBackColor = true;
+            // 
+            // chkShowNotification
+            // 
+            this.chkShowNotification.AutoSize = true;
+            this.chkShowNotification.Checked = global::RGBSync.Properties.Settings.Default.ShowNotification;
+            this.chkShowNotification.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkShowNotification.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "ShowNotification", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.chkShowNotification.Location = new System.Drawing.Point(95, 98);
+            this.chkShowNotification.Name = "chkShowNotification";
+            this.chkShowNotification.Size = new System.Drawing.Size(161, 17);
+            this.chkShowNotification.TabIndex = 4;
+            this.chkShowNotification.Text = "Show Notifcation On Startup";
+            this.chkShowNotification.UseVisualStyleBackColor = true;
             // 
             // chkNovation
             // 
@@ -203,45 +218,17 @@
             this.chkNovation.Checked = global::RGBSync.Properties.Settings.Default.UseNovation;
             this.chkNovation.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkNovation.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseNovation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.chkNovation.Location = new System.Drawing.Point(187, 52);
+            this.chkNovation.Location = new System.Drawing.Point(187, 6);
             this.chkNovation.Name = "chkNovation";
             this.chkNovation.Size = new System.Drawing.Size(133, 17);
             this.chkNovation.TabIndex = 4;
             this.chkNovation.Text = "Use Novation Devices";
             this.chkNovation.UseVisualStyleBackColor = true;
             // 
-            // chkPhilips
-            // 
-            this.chkPhilips.AutoSize = true;
-            this.chkPhilips.Checked = global::RGBSync.Properties.Settings.Default.UsePhilips;
-            this.chkPhilips.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UsePhilips", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.chkPhilips.Location = new System.Drawing.Point(187, 29);
-            this.chkPhilips.Name = "chkPhilips";
-            this.chkPhilips.Size = new System.Drawing.Size(165, 17);
-            this.chkPhilips.TabIndex = 4;
-            this.chkPhilips.Text = "Use Philips Ambilight Devices";
-            this.chkPhilips.UseVisualStyleBackColor = true;
-            this.chkPhilips.CheckedChanged += new System.EventHandler(this.chkPhilips_CheckedChanged);
-            // 
-            // chkAura
-            // 
-            this.chkAura.AutoSize = true;
-            this.chkAura.Checked = global::RGBSync.Properties.Settings.Default.UseAura;
-            this.chkAura.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkAura.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseAura", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.chkAura.Enabled = false;
-            this.chkAura.Location = new System.Drawing.Point(187, 6);
-            this.chkAura.Name = "chkAura";
-            this.chkAura.Size = new System.Drawing.Size(112, 17);
-            this.chkAura.TabIndex = 3;
-            this.chkAura.Text = "Use Aura Devices";
-            this.chkAura.UseVisualStyleBackColor = true;
-            // 
             // chkCorsairCue
             // 
             this.chkCorsairCue.AutoSize = true;
             this.chkCorsairCue.Checked = global::RGBSync.Properties.Settings.Default.UseCorsairCue;
-            this.chkCorsairCue.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkCorsairCue.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseCorsairCue", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.chkCorsairCue.Location = new System.Drawing.Point(6, 6);
             this.chkCorsairCue.Name = "chkCorsairCue";
@@ -254,7 +241,6 @@
             // 
             this.chkLogitech.AutoSize = true;
             this.chkLogitech.Checked = global::RGBSync.Properties.Settings.Default.UseLogitech;
-            this.chkLogitech.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkLogitech.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseLogitech", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.chkLogitech.Location = new System.Drawing.Point(6, 52);
             this.chkLogitech.Name = "chkLogitech";
@@ -275,44 +261,15 @@
             this.chkCorsairLink.Text = "Use Corsair Link Devices";
             this.chkCorsairLink.UseVisualStyleBackColor = true;
             // 
-            // tabPhilips
-            // 
-            this.tabPhilips.Controls.Add(this.TxtPhilipsIP);
-            this.tabPhilips.Controls.Add(this.LblPhilipsIP);
-            this.tabPhilips.Location = new System.Drawing.Point(4, 22);
-            this.tabPhilips.Name = "tabPhilips";
-            this.tabPhilips.Size = new System.Drawing.Size(378, 99);
-            this.tabPhilips.TabIndex = 2;
-            this.tabPhilips.Text = "Philips Amibilight";
-            this.tabPhilips.UseVisualStyleBackColor = true;
-            // 
-            // TxtPhilipsIP
-            // 
-            this.TxtPhilipsIP.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::RGBSync.Properties.Settings.Default, "PhilipsIP", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.TxtPhilipsIP.Location = new System.Drawing.Point(225, 26);
-            this.TxtPhilipsIP.Mask = "000\\.000\\.000\\.000";
-            this.TxtPhilipsIP.Name = "TxtPhilipsIP";
-            this.TxtPhilipsIP.Size = new System.Drawing.Size(87, 20);
-            this.TxtPhilipsIP.TabIndex = 2;
-            this.TxtPhilipsIP.Text = global::RGBSync.Properties.Settings.Default.PhilipsIP;
-            // 
-            // LblPhilipsIP
-            // 
-            this.LblPhilipsIP.AutoSize = true;
-            this.LblPhilipsIP.Location = new System.Drawing.Point(25, 29);
-            this.LblPhilipsIP.Name = "LblPhilipsIP";
-            this.LblPhilipsIP.Size = new System.Drawing.Size(194, 13);
-            this.LblPhilipsIP.TabIndex = 0;
-            this.LblPhilipsIP.Text = "IP Address for your Philips Ambilight TV:";
-            this.LblPhilipsIP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // tabCorsairLink
             // 
             this.tabCorsairLink.Controls.Add(this.GrpLink1);
+            this.tabCorsairLink.Controls.Add(this.GrpLink2);
+            this.tabCorsairLink.Controls.Add(this.GrpLink3);
             this.tabCorsairLink.Location = new System.Drawing.Point(4, 22);
             this.tabCorsairLink.Name = "tabCorsairLink";
             this.tabCorsairLink.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCorsairLink.Size = new System.Drawing.Size(378, 99);
+            this.tabCorsairLink.Size = new System.Drawing.Size(378, 261);
             this.tabCorsairLink.TabIndex = 1;
             this.tabCorsairLink.Text = "WIP";
             this.tabCorsairLink.UseVisualStyleBackColor = true;
@@ -367,73 +324,6 @@
             this.ChkLinkCh1.UseVisualStyleBackColor = true;
             this.ChkLinkCh1.Visible = false;
             // 
-            // GrpLink3
-            // 
-            this.GrpLink3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GrpLink3.Controls.Add(this.NumLinkCh2Amount);
-            this.GrpLink3.Controls.Add(this.LblLinkCh2Amount);
-            this.GrpLink3.Controls.Add(this.LblLinkCh2Type);
-            this.GrpLink3.Controls.Add(this.DDLinkCh2Type);
-            this.GrpLink3.Enabled = false;
-            this.GrpLink3.Location = new System.Drawing.Point(86, 235);
-            this.GrpLink3.Name = "GrpLink3";
-            this.GrpLink3.Size = new System.Drawing.Size(80, 16);
-            this.GrpLink3.TabIndex = 1;
-            this.GrpLink3.TabStop = false;
-            this.GrpLink3.Text = "Channel 2";
-            this.GrpLink3.Visible = false;
-            // 
-            // NumLinkCh2Amount
-            // 
-            this.NumLinkCh2Amount.Location = new System.Drawing.Point(286, 59);
-            this.NumLinkCh2Amount.Maximum = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
-            this.NumLinkCh2Amount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NumLinkCh2Amount.Name = "NumLinkCh2Amount";
-            this.NumLinkCh2Amount.Size = new System.Drawing.Size(74, 20);
-            this.NumLinkCh2Amount.TabIndex = 3;
-            this.NumLinkCh2Amount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // LblLinkCh2Amount
-            // 
-            this.LblLinkCh2Amount.AutoSize = true;
-            this.LblLinkCh2Amount.Location = new System.Drawing.Point(23, 61);
-            this.LblLinkCh2Amount.Name = "LblLinkCh2Amount";
-            this.LblLinkCh2Amount.Size = new System.Drawing.Size(233, 13);
-            this.LblLinkCh2Amount.TabIndex = 2;
-            this.LblLinkCh2Amount.Text = "How many of the above device are connected?\r\n";
-            // 
-            // LblLinkCh2Type
-            // 
-            this.LblLinkCh2Type.AutoSize = true;
-            this.LblLinkCh2Type.Location = new System.Drawing.Point(23, 26);
-            this.LblLinkCh2Type.Name = "LblLinkCh2Type";
-            this.LblLinkCh2Type.Size = new System.Drawing.Size(210, 13);
-            this.LblLinkCh2Type.TabIndex = 1;
-            this.LblLinkCh2Type.Text = "What device is connected to this channel?";
-            // 
-            // DDLinkCh2Type
-            // 
-            this.DDLinkCh2Type.FormattingEnabled = true;
-            this.DDLinkCh2Type.Items.AddRange(new object[] {
-            "HD Fans",
-            "LED Strips"});
-            this.DDLinkCh2Type.Location = new System.Drawing.Point(239, 23);
-            this.DDLinkCh2Type.Name = "DDLinkCh2Type";
-            this.DDLinkCh2Type.Size = new System.Drawing.Size(121, 21);
-            this.DDLinkCh2Type.TabIndex = 0;
-            // 
             // GrpLink2
             // 
             this.GrpLink2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -442,9 +332,9 @@
             this.GrpLink2.Controls.Add(this.LblLinkCh1Type);
             this.GrpLink2.Controls.Add(this.DDLinkCh1Type);
             this.GrpLink2.Enabled = false;
-            this.GrpLink2.Location = new System.Drawing.Point(2, 235);
+            this.GrpLink2.Location = new System.Drawing.Point(6, 76);
             this.GrpLink2.Name = "GrpLink2";
-            this.GrpLink2.Size = new System.Drawing.Size(80, 16);
+            this.GrpLink2.Size = new System.Drawing.Size(366, 88);
             this.GrpLink2.TabIndex = 0;
             this.GrpLink2.TabStop = false;
             this.GrpLink2.Text = "Channel 1";
@@ -501,15 +391,81 @@
             this.DDLinkCh1Type.Size = new System.Drawing.Size(121, 21);
             this.DDLinkCh1Type.TabIndex = 0;
             // 
+            // GrpLink3
+            // 
+            this.GrpLink3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.GrpLink3.Controls.Add(this.NumLinkCh2Amount);
+            this.GrpLink3.Controls.Add(this.LblLinkCh2Amount);
+            this.GrpLink3.Controls.Add(this.LblLinkCh2Type);
+            this.GrpLink3.Controls.Add(this.DDLinkCh2Type);
+            this.GrpLink3.Enabled = false;
+            this.GrpLink3.Location = new System.Drawing.Point(6, 167);
+            this.GrpLink3.Name = "GrpLink3";
+            this.GrpLink3.Size = new System.Drawing.Size(366, 88);
+            this.GrpLink3.TabIndex = 1;
+            this.GrpLink3.TabStop = false;
+            this.GrpLink3.Text = "Channel 2";
+            this.GrpLink3.Visible = false;
+            // 
+            // NumLinkCh2Amount
+            // 
+            this.NumLinkCh2Amount.Location = new System.Drawing.Point(286, 59);
+            this.NumLinkCh2Amount.Maximum = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.NumLinkCh2Amount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumLinkCh2Amount.Name = "NumLinkCh2Amount";
+            this.NumLinkCh2Amount.Size = new System.Drawing.Size(74, 20);
+            this.NumLinkCh2Amount.TabIndex = 3;
+            this.NumLinkCh2Amount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // LblLinkCh2Amount
+            // 
+            this.LblLinkCh2Amount.AutoSize = true;
+            this.LblLinkCh2Amount.Location = new System.Drawing.Point(23, 61);
+            this.LblLinkCh2Amount.Name = "LblLinkCh2Amount";
+            this.LblLinkCh2Amount.Size = new System.Drawing.Size(233, 13);
+            this.LblLinkCh2Amount.TabIndex = 2;
+            this.LblLinkCh2Amount.Text = "How many of the above device are connected?\r\n";
+            // 
+            // LblLinkCh2Type
+            // 
+            this.LblLinkCh2Type.AutoSize = true;
+            this.LblLinkCh2Type.Location = new System.Drawing.Point(23, 26);
+            this.LblLinkCh2Type.Name = "LblLinkCh2Type";
+            this.LblLinkCh2Type.Size = new System.Drawing.Size(210, 13);
+            this.LblLinkCh2Type.TabIndex = 1;
+            this.LblLinkCh2Type.Text = "What device is connected to this channel?";
+            // 
+            // DDLinkCh2Type
+            // 
+            this.DDLinkCh2Type.FormattingEnabled = true;
+            this.DDLinkCh2Type.Items.AddRange(new object[] {
+            "HD Fans",
+            "LED Strips"});
+            this.DDLinkCh2Type.Location = new System.Drawing.Point(239, 23);
+            this.DDLinkCh2Type.Name = "DDLinkCh2Type";
+            this.DDLinkCh2Type.Size = new System.Drawing.Size(121, 21);
+            this.DDLinkCh2Type.TabIndex = 0;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 254);
+            this.ClientSize = new System.Drawing.Size(410, 416);
+            this.Controls.Add(this.LblCopyright);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.GrpLink3);
             this.Controls.Add(this.BtnSave);
-            this.Controls.Add(this.GrpLink2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -528,18 +484,17 @@
             this.tabControl1.ResumeLayout(false);
             this.tabGeneral.ResumeLayout(false);
             this.tabGeneral.PerformLayout();
-            this.tabPhilips.ResumeLayout(false);
-            this.tabPhilips.PerformLayout();
             this.tabCorsairLink.ResumeLayout(false);
             this.GrpLink1.ResumeLayout(false);
             this.GrpLink1.PerformLayout();
-            this.GrpLink3.ResumeLayout(false);
-            this.GrpLink3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumLinkCh2Amount)).EndInit();
             this.GrpLink2.ResumeLayout(false);
             this.GrpLink2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumLinkCh1Amount)).EndInit();
+            this.GrpLink3.ResumeLayout(false);
+            this.GrpLink3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumLinkCh2Amount)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -550,13 +505,10 @@
         private System.Windows.Forms.CheckBox chkLogitech;
         private System.Windows.Forms.CheckBox chkCorsairLink;
         private System.Windows.Forms.CheckBox chkCorsairCue;
-        private System.Windows.Forms.CheckBox chkPhilips;
-        private System.Windows.Forms.CheckBox chkAura;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabGeneral;
         private System.Windows.Forms.TabPage tabCorsairLink;
-        private System.Windows.Forms.TabPage tabPhilips;
         private System.Windows.Forms.GroupBox GrpLink1;
         private System.Windows.Forms.Label LblLinkChDesc;
         private System.Windows.Forms.CheckBox ChkLinkCh2;
@@ -571,8 +523,6 @@
         private System.Windows.Forms.Label LblLinkCh1Amount;
         private System.Windows.Forms.Label LblLinkCh1Type;
         private System.Windows.Forms.ComboBox DDLinkCh1Type;
-        private System.Windows.Forms.MaskedTextBox TxtPhilipsIP;
-        private System.Windows.Forms.Label LblPhilipsIP;
         private System.Windows.Forms.CheckBox chkCM;
         private System.Windows.Forms.CheckBox chkNovation;
         private System.Windows.Forms.CheckBox chkMSI;
@@ -580,6 +530,8 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem settiingsToolStripMenuItem;
+        private System.Windows.Forms.CheckBox chkShowNotification;
+        private System.Windows.Forms.Label LblCopyright;
     }
 }
 

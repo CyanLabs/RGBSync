@@ -25,7 +25,7 @@ namespace RGBSync.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool UseCorsairCue {
             get {
                 return ((bool)(this["UseCorsairCue"]));
@@ -37,7 +37,7 @@ namespace RGBSync.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool UseCorsairLink {
             get {
                 return ((bool)(this["UseCorsairLink"]));
@@ -49,7 +49,7 @@ namespace RGBSync.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool UseLogitech {
             get {
                 return ((bool)(this["UseLogitech"]));
@@ -61,7 +61,7 @@ namespace RGBSync.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool UseAura {
             get {
                 return ((bool)(this["UseAura"]));
@@ -121,7 +121,7 @@ namespace RGBSync.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool UseCM {
             get {
                 return ((bool)(this["UseCM"]));
@@ -145,13 +145,25 @@ namespace RGBSync.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool UseMSI {
             get {
                 return ((bool)(this["UseMSI"]));
             }
             set {
                 this["UseMSI"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ShowNotification {
+            get {
+                return ((bool)(this["ShowNotification"]));
+            }
+            set {
+                this["ShowNotification"] = value;
             }
         }
     }

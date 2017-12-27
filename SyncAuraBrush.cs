@@ -1,43 +1,28 @@
-﻿using System.Collections.Generic;
-using RGB.NET.Core;
-using RGB.NET.Devices.Asus;
+﻿using RGB.NET.Core;
 
 namespace RGBSync
 {
-    public class SyncAuraBrush : AbstractBrush
+    public class SyncBrush : AbstractBrush
     {
         #region Properties & Fields
 
-        private AsusMainboardRGBDevice _device;
-        private Color _currentColor;
+        private readonly Led _syncLed;
 
         #endregion
 
         #region Constructors
 
-        public SyncAuraBrush(AsusMainboardRGBDevice device)
+        public SyncBrush(Led syncLed)
         {
-            this._device = device;
+            this._syncLed = syncLed;
         }
 
         #endregion
 
         #region Methods
 
-        public override void PerformRender(Rectangle rectangle, IEnumerable<BrushRenderTarget> renderTargets)
-        {
-            _currentColor = _device?.GetColors()[0] ?? Color.Transparent;
-
-            base.PerformRender(rectangle, renderTargets);
-        }
-
-        protected override Color GetColorAtPoint(Rectangle rectangle, BrushRenderTarget renderTarget)
-        {
-            return _currentColor;
-        }
+        protected override Color GetColorAtPoint(Rectangle rectangle, BrushRenderTarget renderTarget) => _syncLed.Color;
 
         #endregion
     }
-
-
 }

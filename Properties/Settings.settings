@@ -3,16 +3,16 @@
   <Profiles />
   <Settings>
     <Setting Name="UseCorsairCue" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="UseCorsairLink" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="UseLogitech" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="UseAura" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="UsePhilips" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
@@ -27,12 +27,15 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="UseCM" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="UseNovation" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="UseMSI" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ShowNotification" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
