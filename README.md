@@ -6,7 +6,7 @@ A ready to use application for syncing RGB.NET capable devices. it uses Aura as 
 
 RGB.NET = https://github.com/DarthAffe/RGB.NET/
 
-HidLibrary = https://github.com/mikeobrien/HidLibrary
+HidSharp = https://github.com/jcoenraadts/hid-sharp
 
 Thanks to Zenairo for the bases of the code to control Corsair Link Lighting Node Pro / Commander Pro
 
@@ -14,9 +14,10 @@ Supported Devices
 
 - Corsair Cue
 - Corsair Link
-- Asus Aura (master)
+- Asus Aura (SyncBack Source)
 - MSI
 - Cooler Master
 - Logitech
 - Novation
-- Philips Ambilight TV's (Network)
+
+Any RGB.NET supported devices can be added relatively easily, just raise a issue.
