@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGBSync", "RGBSync.csproj", "{33FB2FC0-9778-4A46-913A-D870C2D4C37C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGB.NET.Devices.CorsairLink", "..\RGB.NET.Devices.CorsairLink\RGB.NET.Devices.CorsairLink.csproj", "{670A630B-A2D1-459B-9A4A-E44D09F13DC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{33FB2FC0-9778-4A46-913A-D870C2D4C37C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33FB2FC0-9778-4A46-913A-D870C2D4C37C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33FB2FC0-9778-4A46-913A-D870C2D4C37C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{670A630B-A2D1-459B-9A4A-E44D09F13DC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{670A630B-A2D1-459B-9A4A-E44D09F13DC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{670A630B-A2D1-459B-9A4A-E44D09F13DC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{670A630B-A2D1-459B-9A4A-E44D09F13DC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

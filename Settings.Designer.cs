@@ -39,7 +39,6 @@
             this.BtnSave = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
-            this.LblCopyright = new System.Windows.Forms.Label();
             this.chkCM = new System.Windows.Forms.CheckBox();
             this.chkMSI = new System.Windows.Forms.CheckBox();
             this.chkShowNotification = new System.Windows.Forms.CheckBox();
@@ -62,6 +61,7 @@
             this.LblLinkCh2Amount = new System.Windows.Forms.Label();
             this.LblLinkCh2Type = new System.Windows.Forms.Label();
             this.DDLinkCh2Type = new System.Windows.Forms.ComboBox();
+            this.LblCopyright = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -165,16 +165,6 @@
             this.tabGeneral.Text = "General";
             this.tabGeneral.UseVisualStyleBackColor = true;
             // 
-            // LblCopyright
-            // 
-            this.LblCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LblCopyright.AutoSize = true;
-            this.LblCopyright.Location = new System.Drawing.Point(9, 394);
-            this.LblCopyright.Name = "LblCopyright";
-            this.LblCopyright.Size = new System.Drawing.Size(252, 13);
-            this.LblCopyright.TabIndex = 5;
-            this.LblCopyright.Text = "Copyright © Cyanlabs 2017 - Powered by RGB.NET";
-            // 
             // chkCM
             // 
             this.chkCM.AutoSize = true;
@@ -216,7 +206,6 @@
             // 
             this.chkNovation.AutoSize = true;
             this.chkNovation.Checked = global::RGBSync.Properties.Settings.Default.UseNovation;
-            this.chkNovation.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkNovation.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseNovation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.chkNovation.Location = new System.Drawing.Point(187, 6);
             this.chkNovation.Name = "chkNovation";
@@ -457,6 +446,16 @@
             this.DDLinkCh2Type.Name = "DDLinkCh2Type";
             this.DDLinkCh2Type.Size = new System.Drawing.Size(121, 21);
             this.DDLinkCh2Type.TabIndex = 0;
+            // 
+            // LblCopyright
+            // 
+            this.LblCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LblCopyright.AutoSize = true;
+            this.LblCopyright.Location = new System.Drawing.Point(9, 394);
+            this.LblCopyright.Name = "LblCopyright";
+            this.LblCopyright.Size = new System.Drawing.Size(252, 13);
+            this.LblCopyright.TabIndex = 5;
+            this.LblCopyright.Text = "Copyright © Cyanlabs 2017 - Powered by RGB.NET";
             // 
             // Settings
             // 
