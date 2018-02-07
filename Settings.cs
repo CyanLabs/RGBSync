@@ -28,9 +28,9 @@ namespace RGBSync
         private void Form1_Load(object sender, EventArgs e)
         {
             if (chkShowNotification.Checked) notifyIcon1.ShowBalloonTip(5000, "RGBSync", "Click the notification icon to configure RGB Devices.", ToolTipIcon.Info);
-            //Process.Start("C:\\Program Files (x86)\\ASUS\\AURA\\AURA.exe");
-            //Thread.Sleep(1000);
-            //Process.GetProcessesByName("Aura")[0].Kill();
+            Process.Start("C:\\Program Files (x86)\\ASUS\\AURA\\AURA.exe");
+            Thread.Sleep(1000);
+            Process.GetProcessesByName("Aura")[0].Kill();
 
             tabCorsairLink.Enabled = false;
             try
