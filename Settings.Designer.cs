@@ -39,18 +39,9 @@
             this.BtnSave = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
-            this.chkCM = new System.Windows.Forms.CheckBox();
-            this.chkMSI = new System.Windows.Forms.CheckBox();
-            this.chkShowNotification = new System.Windows.Forms.CheckBox();
-            this.chkNovation = new System.Windows.Forms.CheckBox();
-            this.chkCorsairCue = new System.Windows.Forms.CheckBox();
-            this.chkLogitech = new System.Windows.Forms.CheckBox();
-            this.chkCorsairLink = new System.Windows.Forms.CheckBox();
             this.tabCorsairLink = new System.Windows.Forms.TabPage();
             this.GrpLink1 = new System.Windows.Forms.GroupBox();
             this.LblLinkChDesc = new System.Windows.Forms.Label();
-            this.ChkLinkCh2 = new System.Windows.Forms.CheckBox();
-            this.ChkLinkCh1 = new System.Windows.Forms.CheckBox();
             this.GrpLink2 = new System.Windows.Forms.GroupBox();
             this.NumLinkCh1Amount = new System.Windows.Forms.NumericUpDown();
             this.LblLinkCh1Amount = new System.Windows.Forms.Label();
@@ -62,6 +53,16 @@
             this.LblLinkCh2Type = new System.Windows.Forms.Label();
             this.DDLinkCh2Type = new System.Windows.Forms.ComboBox();
             this.LblCopyright = new System.Windows.Forms.Label();
+            this.chkRazer = new System.Windows.Forms.CheckBox();
+            this.chkCM = new System.Windows.Forms.CheckBox();
+            this.chkMSI = new System.Windows.Forms.CheckBox();
+            this.chkShowNotification = new System.Windows.Forms.CheckBox();
+            this.chkNovation = new System.Windows.Forms.CheckBox();
+            this.chkCorsairCue = new System.Windows.Forms.CheckBox();
+            this.chkLogitech = new System.Windows.Forms.CheckBox();
+            this.chkCorsairLink = new System.Windows.Forms.CheckBox();
+            this.ChkLinkCh2 = new System.Windows.Forms.CheckBox();
+            this.ChkLinkCh1 = new System.Windows.Forms.CheckBox();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -150,6 +151,7 @@
             // 
             // tabGeneral
             // 
+            this.tabGeneral.Controls.Add(this.chkRazer);
             this.tabGeneral.Controls.Add(this.chkCM);
             this.tabGeneral.Controls.Add(this.chkMSI);
             this.tabGeneral.Controls.Add(this.chkShowNotification);
@@ -164,91 +166,6 @@
             this.tabGeneral.TabIndex = 0;
             this.tabGeneral.Text = "General";
             this.tabGeneral.UseVisualStyleBackColor = true;
-            // 
-            // chkCM
-            // 
-            this.chkCM.AutoSize = true;
-            this.chkCM.Checked = global::RGBSync.Properties.Settings.Default.UseCM;
-            this.chkCM.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseCM", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.chkCM.Location = new System.Drawing.Point(187, 52);
-            this.chkCM.Name = "chkCM";
-            this.chkCM.Size = new System.Drawing.Size(152, 17);
-            this.chkCM.TabIndex = 4;
-            this.chkCM.Text = "Use CoolerMaster Devices";
-            this.chkCM.UseVisualStyleBackColor = true;
-            // 
-            // chkMSI
-            // 
-            this.chkMSI.AutoSize = true;
-            this.chkMSI.Checked = global::RGBSync.Properties.Settings.Default.UseMSI;
-            this.chkMSI.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseMSI", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.chkMSI.Location = new System.Drawing.Point(187, 29);
-            this.chkMSI.Name = "chkMSI";
-            this.chkMSI.Size = new System.Drawing.Size(109, 17);
-            this.chkMSI.TabIndex = 4;
-            this.chkMSI.Text = "Use MSI Devices";
-            this.chkMSI.UseVisualStyleBackColor = true;
-            // 
-            // chkShowNotification
-            // 
-            this.chkShowNotification.AutoSize = true;
-            this.chkShowNotification.Checked = global::RGBSync.Properties.Settings.Default.ShowNotification;
-            this.chkShowNotification.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkShowNotification.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "ShowNotification", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.chkShowNotification.Location = new System.Drawing.Point(95, 98);
-            this.chkShowNotification.Name = "chkShowNotification";
-            this.chkShowNotification.Size = new System.Drawing.Size(161, 17);
-            this.chkShowNotification.TabIndex = 4;
-            this.chkShowNotification.Text = "Show Notifcation On Startup";
-            this.chkShowNotification.UseVisualStyleBackColor = true;
-            // 
-            // chkNovation
-            // 
-            this.chkNovation.AutoSize = true;
-            this.chkNovation.Checked = global::RGBSync.Properties.Settings.Default.UseNovation;
-            this.chkNovation.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseNovation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.chkNovation.Location = new System.Drawing.Point(187, 6);
-            this.chkNovation.Name = "chkNovation";
-            this.chkNovation.Size = new System.Drawing.Size(133, 17);
-            this.chkNovation.TabIndex = 4;
-            this.chkNovation.Text = "Use Novation Devices";
-            this.chkNovation.UseVisualStyleBackColor = true;
-            // 
-            // chkCorsairCue
-            // 
-            this.chkCorsairCue.AutoSize = true;
-            this.chkCorsairCue.Checked = global::RGBSync.Properties.Settings.Default.UseCorsairCue;
-            this.chkCorsairCue.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseCorsairCue", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.chkCorsairCue.Location = new System.Drawing.Point(6, 6);
-            this.chkCorsairCue.Name = "chkCorsairCue";
-            this.chkCorsairCue.Size = new System.Drawing.Size(144, 17);
-            this.chkCorsairCue.TabIndex = 0;
-            this.chkCorsairCue.Text = "Use Corsair Cue Devices";
-            this.chkCorsairCue.UseVisualStyleBackColor = true;
-            // 
-            // chkLogitech
-            // 
-            this.chkLogitech.AutoSize = true;
-            this.chkLogitech.Checked = global::RGBSync.Properties.Settings.Default.UseLogitech;
-            this.chkLogitech.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseLogitech", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.chkLogitech.Location = new System.Drawing.Point(6, 52);
-            this.chkLogitech.Name = "chkLogitech";
-            this.chkLogitech.Size = new System.Drawing.Size(131, 17);
-            this.chkLogitech.TabIndex = 2;
-            this.chkLogitech.Text = "Use Logitech Devices";
-            this.chkLogitech.UseVisualStyleBackColor = true;
-            // 
-            // chkCorsairLink
-            // 
-            this.chkCorsairLink.AutoSize = true;
-            this.chkCorsairLink.Checked = global::RGBSync.Properties.Settings.Default.UseCorsairLink;
-            this.chkCorsairLink.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseCorsairLink", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.chkCorsairLink.Location = new System.Drawing.Point(6, 29);
-            this.chkCorsairLink.Name = "chkCorsairLink";
-            this.chkCorsairLink.Size = new System.Drawing.Size(145, 17);
-            this.chkCorsairLink.TabIndex = 1;
-            this.chkCorsairLink.Text = "Use Corsair Link Devices";
-            this.chkCorsairLink.UseVisualStyleBackColor = true;
             // 
             // tabCorsairLink
             // 
@@ -284,34 +201,6 @@
             this.LblLinkChDesc.TabIndex = 0;
             this.LblLinkChDesc.Text = "Which channels to enable?";
             this.LblLinkChDesc.Visible = false;
-            // 
-            // ChkLinkCh2
-            // 
-            this.ChkLinkCh2.AutoSize = true;
-            this.ChkLinkCh2.Checked = global::RGBSync.Properties.Settings.Default.UseCorsairLinkCh2;
-            this.ChkLinkCh2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ChkLinkCh2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseCorsairLinkCh2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ChkLinkCh2.Location = new System.Drawing.Point(266, 23);
-            this.ChkLinkCh2.Name = "ChkLinkCh2";
-            this.ChkLinkCh2.Size = new System.Drawing.Size(74, 17);
-            this.ChkLinkCh2.TabIndex = 1;
-            this.ChkLinkCh2.Text = "Channel 2";
-            this.ChkLinkCh2.UseVisualStyleBackColor = true;
-            this.ChkLinkCh2.Visible = false;
-            // 
-            // ChkLinkCh1
-            // 
-            this.ChkLinkCh1.AutoSize = true;
-            this.ChkLinkCh1.Checked = global::RGBSync.Properties.Settings.Default.UseCorsairLinkCh1;
-            this.ChkLinkCh1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ChkLinkCh1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseCorsairLinkCh1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ChkLinkCh1.Location = new System.Drawing.Point(181, 23);
-            this.ChkLinkCh1.Name = "ChkLinkCh1";
-            this.ChkLinkCh1.Size = new System.Drawing.Size(74, 17);
-            this.ChkLinkCh1.TabIndex = 0;
-            this.ChkLinkCh1.Text = "Channel 1";
-            this.ChkLinkCh1.UseVisualStyleBackColor = true;
-            this.ChkLinkCh1.Visible = false;
             // 
             // GrpLink2
             // 
@@ -457,6 +346,131 @@
             this.LblCopyright.TabIndex = 5;
             this.LblCopyright.Text = "Copyright © Cyanlabs 2017 - Powered by RGB.NET";
             // 
+            // chkRazer
+            // 
+            this.chkRazer.AutoSize = true;
+            this.chkRazer.Checked = global::RGBSync.Properties.Settings.Default.UseRazer;
+            this.chkRazer.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseRazer", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.chkRazer.Location = new System.Drawing.Point(6, 75);
+            this.chkRazer.Name = "chkRazer";
+            this.chkRazer.Size = new System.Drawing.Size(118, 17);
+            this.chkRazer.TabIndex = 5;
+            this.chkRazer.Text = "Use Razer Devices";
+            this.chkRazer.UseVisualStyleBackColor = true;
+            // 
+            // chkCM
+            // 
+            this.chkCM.AutoSize = true;
+            this.chkCM.Checked = global::RGBSync.Properties.Settings.Default.UseCM;
+            this.chkCM.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseCM", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.chkCM.Location = new System.Drawing.Point(187, 52);
+            this.chkCM.Name = "chkCM";
+            this.chkCM.Size = new System.Drawing.Size(152, 17);
+            this.chkCM.TabIndex = 4;
+            this.chkCM.Text = "Use CoolerMaster Devices";
+            this.chkCM.UseVisualStyleBackColor = true;
+            // 
+            // chkMSI
+            // 
+            this.chkMSI.AutoSize = true;
+            this.chkMSI.Checked = global::RGBSync.Properties.Settings.Default.UseMSI;
+            this.chkMSI.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseMSI", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.chkMSI.Location = new System.Drawing.Point(187, 29);
+            this.chkMSI.Name = "chkMSI";
+            this.chkMSI.Size = new System.Drawing.Size(109, 17);
+            this.chkMSI.TabIndex = 4;
+            this.chkMSI.Text = "Use MSI Devices";
+            this.chkMSI.UseVisualStyleBackColor = true;
+            // 
+            // chkShowNotification
+            // 
+            this.chkShowNotification.AutoSize = true;
+            this.chkShowNotification.Checked = global::RGBSync.Properties.Settings.Default.ShowNotification;
+            this.chkShowNotification.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkShowNotification.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "ShowNotification", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.chkShowNotification.Location = new System.Drawing.Point(93, 110);
+            this.chkShowNotification.Name = "chkShowNotification";
+            this.chkShowNotification.Size = new System.Drawing.Size(161, 17);
+            this.chkShowNotification.TabIndex = 4;
+            this.chkShowNotification.Text = "Show Notifcation On Startup";
+            this.chkShowNotification.UseVisualStyleBackColor = true;
+            // 
+            // chkNovation
+            // 
+            this.chkNovation.AutoSize = true;
+            this.chkNovation.Checked = global::RGBSync.Properties.Settings.Default.UseNovation;
+            this.chkNovation.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseNovation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.chkNovation.Location = new System.Drawing.Point(187, 6);
+            this.chkNovation.Name = "chkNovation";
+            this.chkNovation.Size = new System.Drawing.Size(133, 17);
+            this.chkNovation.TabIndex = 4;
+            this.chkNovation.Text = "Use Novation Devices";
+            this.chkNovation.UseVisualStyleBackColor = true;
+            // 
+            // chkCorsairCue
+            // 
+            this.chkCorsairCue.AutoSize = true;
+            this.chkCorsairCue.Checked = global::RGBSync.Properties.Settings.Default.UseCorsairCue;
+            this.chkCorsairCue.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseCorsairCue", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.chkCorsairCue.Location = new System.Drawing.Point(6, 6);
+            this.chkCorsairCue.Name = "chkCorsairCue";
+            this.chkCorsairCue.Size = new System.Drawing.Size(144, 17);
+            this.chkCorsairCue.TabIndex = 0;
+            this.chkCorsairCue.Text = "Use Corsair Cue Devices";
+            this.chkCorsairCue.UseVisualStyleBackColor = true;
+            // 
+            // chkLogitech
+            // 
+            this.chkLogitech.AutoSize = true;
+            this.chkLogitech.Checked = global::RGBSync.Properties.Settings.Default.UseLogitech;
+            this.chkLogitech.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseLogitech", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.chkLogitech.Location = new System.Drawing.Point(6, 52);
+            this.chkLogitech.Name = "chkLogitech";
+            this.chkLogitech.Size = new System.Drawing.Size(131, 17);
+            this.chkLogitech.TabIndex = 2;
+            this.chkLogitech.Text = "Use Logitech Devices";
+            this.chkLogitech.UseVisualStyleBackColor = true;
+            // 
+            // chkCorsairLink
+            // 
+            this.chkCorsairLink.AutoSize = true;
+            this.chkCorsairLink.Checked = global::RGBSync.Properties.Settings.Default.UseCorsairLink;
+            this.chkCorsairLink.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseCorsairLink", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.chkCorsairLink.Location = new System.Drawing.Point(6, 29);
+            this.chkCorsairLink.Name = "chkCorsairLink";
+            this.chkCorsairLink.Size = new System.Drawing.Size(145, 17);
+            this.chkCorsairLink.TabIndex = 1;
+            this.chkCorsairLink.Text = "Use Corsair Link Devices";
+            this.chkCorsairLink.UseVisualStyleBackColor = true;
+            // 
+            // ChkLinkCh2
+            // 
+            this.ChkLinkCh2.AutoSize = true;
+            this.ChkLinkCh2.Checked = global::RGBSync.Properties.Settings.Default.UseCorsairLinkCh2;
+            this.ChkLinkCh2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ChkLinkCh2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseCorsairLinkCh2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.ChkLinkCh2.Location = new System.Drawing.Point(266, 23);
+            this.ChkLinkCh2.Name = "ChkLinkCh2";
+            this.ChkLinkCh2.Size = new System.Drawing.Size(74, 17);
+            this.ChkLinkCh2.TabIndex = 1;
+            this.ChkLinkCh2.Text = "Channel 2";
+            this.ChkLinkCh2.UseVisualStyleBackColor = true;
+            this.ChkLinkCh2.Visible = false;
+            // 
+            // ChkLinkCh1
+            // 
+            this.ChkLinkCh1.AutoSize = true;
+            this.ChkLinkCh1.Checked = global::RGBSync.Properties.Settings.Default.UseCorsairLinkCh1;
+            this.ChkLinkCh1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ChkLinkCh1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::RGBSync.Properties.Settings.Default, "UseCorsairLinkCh1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.ChkLinkCh1.Location = new System.Drawing.Point(181, 23);
+            this.ChkLinkCh1.Name = "ChkLinkCh1";
+            this.ChkLinkCh1.Size = new System.Drawing.Size(74, 17);
+            this.ChkLinkCh1.TabIndex = 0;
+            this.ChkLinkCh1.Text = "Channel 1";
+            this.ChkLinkCh1.UseVisualStyleBackColor = true;
+            this.ChkLinkCh1.Visible = false;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,6 +545,7 @@
         private System.Windows.Forms.ToolStripMenuItem settiingsToolStripMenuItem;
         private System.Windows.Forms.CheckBox chkShowNotification;
         private System.Windows.Forms.Label LblCopyright;
+        private System.Windows.Forms.CheckBox chkRazer;
     }
 }
 

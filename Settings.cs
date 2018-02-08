@@ -5,6 +5,7 @@ using RGB.NET.Core;
 using RGB.NET.Devices.Corsair;
 using RGB.NET.Devices.Logitech;
 using RGB.NET.Devices.Asus;
+using RGB.NET.Devices.Razer;
 using RGB.NET.Devices.CorsairLink;
 using RGB.NET.Groups;
 using RGB.NET.Devices.CoolerMaster;
@@ -43,6 +44,7 @@ namespace RGBSync
                 if (chkNovation.Checked) { RGBSurface.Instance.LoadDevices(NovationDeviceProvider.Instance, exclusiveAccessIfPossible: true, throwExceptions: true); }
                 if (chkCorsairLink.Checked) { RGBSurface.Instance.LoadDevices(CorsairLinkDeviceProvider.Instance, exclusiveAccessIfPossible: false, throwExceptions: true); }
                 if (chkMSI.Checked) { RGBSurface.Instance.LoadDevices(MsiDeviceProvider.Instance, exclusiveAccessIfPossible: true, throwExceptions: true); }
+                if (chkRazer.Checked) { RGBSurface.Instance.LoadDevices(RazerDeviceProvider.Instance, exclusiveAccessIfPossible: true, throwExceptions: true); }
 
 
                 AsusMainboardRGBDevice mainboard = RGBSurface.Instance.GetDevices<AsusMainboardRGBDevice>().FirstOrDefault();

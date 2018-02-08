@@ -166,5 +166,29 @@ namespace RGBSync.Properties {
                 this["ShowNotification"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UseRazor {
+            get {
+                return ((bool)(this["UseRazor"]));
+            }
+            set {
+                this["UseRazor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UseRazer {
+            get {
+                return ((bool)(this["UseRazer"]));
+            }
+            set {
+                this["UseRazer"] = value;
+            }
+        }
     }
 }
