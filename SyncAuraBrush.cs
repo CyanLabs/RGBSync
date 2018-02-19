@@ -1,4 +1,5 @@
 ﻿using RGB.NET.Core;
+using System.Diagnostics;
 
 namespace RGBSync
 {
@@ -21,7 +22,11 @@ namespace RGBSync
 
         #region Methods
 
-        protected override Color GetColorAtPoint(Rectangle rectangle, BrushRenderTarget renderTarget) => _syncLed.Color;
+        protected override Color GetColorAtPoint(Rectangle rectangle, BrushRenderTarget renderTarget)
+        {
+            
+            return _syncLed.Color;
+        }
 
         #endregion
     }

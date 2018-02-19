@@ -28,6 +28,9 @@ namespace RGBSync
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.ShowInTaskbar = false;
+            this.WindowState = FormWindowState.Minimized;
+            this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
             if (chkShowNotification.Checked) notifyIcon1.ShowBalloonTip(5000, "RGBSync", "Click the notification icon to configure RGB Devices.", ToolTipIcon.Info);
             Process.Start("C:\\Program Files (x86)\\ASUS\\AURA\\AURA.exe");
             Thread.Sleep(1000);
@@ -55,7 +58,7 @@ namespace RGBSync
 
                 _ledGroup = new ListLedGroup(RGBSurface.Instance.Leds).Exclude(mainboard.ToArray());
                 _ledGroup.Brush = new SyncBrush(((IRGBDevice)mainboard)[SYNC_LED]);
-
+                MessageBox.Show(((IRGBDevice)mainboard)[SYNC_LED].Color.R.ToString());
                 RGBSurface.Instance.UpdateFrequency = 1 / 60.0;
                 RGBSurface.Instance.UpdateMode = UpdateMode.Continuous;
             }
