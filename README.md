@@ -4,7 +4,7 @@ A ready to use application for syncing RGB.NET capable devices. it uses Aura as 
 
 PLEASE NOTE RGBSYNC DOES NOT WORK ON RYZEN BOARDS (ALL THE ONES TESTED ATLEAST) DUE TO THIS BUG - https://rog.asus.com/forum/showthread.php?97533-Calling-GetMBColor-returns-only-white
 
-ANY RYZEN MOTHERBOARD BUG REPORTS WILL BE CLOSED.
+ANY RYZEN MOTHERBOARD BUG REPORTS STATING IT'S ONLY WHITE/BLACK WILL BE CLOSED.
 
 ![Screenshot](screenshot.png "Screenshot")
 
