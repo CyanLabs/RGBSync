@@ -32,9 +32,9 @@ namespace RGBSync
             this.WindowState = FormWindowState.Minimized;
             this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
             if (chkShowNotification.Checked) notifyIcon1.ShowBalloonTip(5000, "RGBSync", "Click the notification icon to configure RGB Devices.", ToolTipIcon.Info);
-            Process.Start("C:\\Program Files (x86)\\ASUS\\AURA\\AURA.exe");
-            Thread.Sleep(1000);
-            Process.GetProcessesByName("Aura")[0].Kill();
+            //Process.Start("C:\\Program Files (x86)\\ASUS\\AURA\\AURA.exe");
+            //Thread.Sleep(1000);
+            //Process.GetProcessesByName("Aura")[0].Kill();
 
             tabCorsairLink.Enabled = false;
             try
@@ -58,8 +58,12 @@ namespace RGBSync
 
                 _ledGroup = new ListLedGroup(RGBSurface.Instance.Leds).Exclude(mainboard.ToArray());
                 _ledGroup.Brush = new SyncBrush(((IRGBDevice)mainboard)[SYNC_LED]);
-                RGBSurface.Instance.UpdateFrequency = 1 / 60.0;
-                RGBSurface.Instance.UpdateMode = UpdateMode.Continuous;
+                TimerUpdateTrigger TimerTrigger = new TimerUpdateTrigger();
+                TimerTrigger.UpdateFrequency = 0.05;
+                RGBSurface.Instance.RegisterUpdateTrigger(TimerTrigger);
+                TimerTrigger.Start();
+
+
             }
             catch (Exception ex)
             {
